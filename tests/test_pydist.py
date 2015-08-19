@@ -33,3 +33,7 @@ class Test_guess_dependency(unittest.TestCase):
                 shell=True,
                 stdout=PIPE,
                 stderr=PIPE)
+
+    def test_sensible_guess(self):
+        dep = pydist.guess_dependency('cpython3', 'foobar')
+        self.assertEqual(dep, 'python3-foobar')

@@ -182,7 +182,7 @@ def guess_dependency(impl, req, version=None):
              'add "%s %s-fixme" line to %s or add proper '
              ' dependency to Depends by hand and ignore this info.',
              name, safe_name(name), pname, PYDIST_OVERRIDES_FNAMES[impl])
-    # return pname
+    return pname
 
 
 def parse_pydep(impl, fname):
